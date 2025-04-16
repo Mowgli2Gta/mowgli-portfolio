@@ -548,12 +548,13 @@ ol {
 }
 
 .slider {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
 .slider img {
-  width: 65vw;             /* Image prenant 65% de la largeur de l'écran */
+  width: calc(100.333% - 10px); /* 3 colonnes, moins l'espace du gap */
   max-width: 600px;        /* Limite la largeur max des images */
   height: auto;            /* Hauteur ajustée pour conserver les proportions */
   scroll-snap-align: center;
@@ -564,7 +565,7 @@ ol {
 }
 
 .slider img:hover {
-  transform: scale(1.03);
+  transform: scale(1.2);
 }
 
 /* Flèches de navigation centrées */
